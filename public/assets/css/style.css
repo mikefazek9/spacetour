@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Bellefair&display=swap');
+
+/* example font */
+/* 
+    font-family: 'Barlow Condensed', sans-serif;
+
+    font-family: 'Bellefair', serif;
+*/
+/*************************************************************************
+HOME PAGE START OF CSS FILE
+**************************************************************************/
+html{
+    width: 100%;
+    height: 100vh;
+}
+#home{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    /* default settings */
+    background-image: url('../home/background-home-desktop.jpg');
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+    font-family: 'Bellefair', serif;
+}
+/* font style */
+p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.bigText{
+    font-size: 150px;
+    text-transform: uppercase;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+    height: 65px;
+}
+
+/* logo */
+.logo{
+padding-left: 1rem;
+}
+/* hamburger icon */
+.hamburger{
+    display: none;
+}
+/* links inside nav */
+.nav-menu{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    z-index: 1;
+    background-color:rgba(11, 13, 23);
+}
+
+.align-md-line{
+    color: #fff;
+    width: 45%;
+    z-index: 100;
+    margin-left: 1rem;
+    position: absolute;
+    left: 70px;
+}
+/* .nav-items{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    z-index: 1;
+    background-color:rgba(11,13,23, 0.5);
+} */
+
+.nav-items a{
+    color: #fff;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.nav-items a:hover{
+    color:rgba(255, 255, 255, 0.699);
+    padding-bottom: 20px;
+    border-bottom: #fff solid 2px;
+
+}
+
+/* whole page in div */
+.home-page-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+/* left half of page for text */
+.home-left-half{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    padding: 2rem;
+    align-self: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+/* so you want to text */
+.travelText{
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4.75px;
+}
+/* right half of page on desktop */
+.home-right-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.circle-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 300px;
+    left: 400px;
+}
+
+.circle-div:hover{
+    transition: all .7s ease-out;
+    cursor: pointer;
+    box-shadow: 5px 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.explore{
+    margin: 0;
+    color:rgba(11,13,23);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+/* link to destination page */
+.explore a{
+    text-decoration: none;
+    color: rgba(11,13,23);
+    font-weight: 500;
+    font-family: 'Bellefair', serif;
+    padding:0;
+    letter-spacing: 5px;
+}
+/****************************************************************************
+  DESTINATION PAGE START CSS FILE
+  ***************************************************************************/
+  #destination{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../destination/background-destination-desktop.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+    font-family: 'Bellefair', serif;
+}
+
+/* des cc */
+.des-cc{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.des-column{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.dest-txt{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3rem;
+    text-align: left;
+}
+.img-des{
+    width: 75%;
+}
+
+.dest-info-50{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.des-link-cc{
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: 25vw;
+    align-items: center;
+    margin-top: 5rem;
+    
+}
+
+.dest-planet-links{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0 10px 0 10px;
+    text-align: left;
+    text-decoration: none;
+    align-items: center;
+}
+
+.dest-planet-links:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.planet-info-cc{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height:500px;
+    margin-top: 2rem;
+    padding:0.8rem;
+}
+
+.planet-title{
+    font-family: 'Bellefair', serif;
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+.planet-txt{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+.ww-line-50{
+    color: #fff;
+    width: 100%;
+}
+
+.des-tt-cc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+.tt-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+}
+
+.avg-tr-title{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.tt-txt{
+    font-size: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;
+}
+
+/* *****************************************************************************************
+CREW PAGE
+********************************************************************************************/
+#crew-body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image: url('../crew/background-crew-desktop.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+    font-family: 'Bellefair', serif;
+    overflow: hidden;
+}
+
+.meet-crew{
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    text-transform: uppercase;
+}
+.numbers{
+    color: rgba(160, 160, 160, 0.5);
+    padding-left: 2rem;
+}
+
+.crew-con{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.crew-info-cc{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto 0 auto;
+    width: 40vw;
+}
+.crew-title{
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.crew-name{
+    font-size: 2.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase; 
+    margin: 1rem;
+}
+.crew-photo-cc{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.crew-txt{
+    font-size: 1rem;
+    line-height: 1rem;
+    letter-spacing: 5px;
+}
+
+.crew-img{
+    width: 60%;
+    height: 80%;
+}
+
+.circle-cc{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    height: 15%;
+    margin: auto;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.crew-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: rgb(51, 51, 51);
+    list-style: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+}
+li{
+    list-style: none;
+}
+.active{
+    background-color: #fff;;
+    color: rgb(208, 214, 249);
+}
+
+  /****************************************************************************
+  MEDIA QUERIES FOR ALL PAGES
+  ****************************************************************************/
+  
+@media screen and (max-width: 428px) {
+    /* home page */
+    #home{
+        background-image: url('../home/background-home-mobile.jpg');
+        background-color: black;
+        background-attachment: fixed;
+        background-position: center;
+        background-size:cover;
+        height: 100%;
+        overflow: hidden;
+    }
+    /* all pages navbar */
+    .hamburger{
+        display: flex;
+        position: fixed;
+        top: 25px;
+        right:30px;
+        z-index: 200;
+    }
+    .nav-menu{
+        display: none;
+    }
+    
+     .active{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: right;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.150);
+        z-index: 100;
+    }
+  
+    .nav-items{
+        display: flex;
+        width: 50%;
+        position: relative;
+        top: 450px;
+        right: -70px;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        font-family: 'Bellefair', serif;
+    }
+    .nav-items a{
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+    /* /navbar */
+
+    .number{display: none;}
+
+    .home-page-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    p{
+        font-size: 1.5rem;
+        padding: 1.1rem;
+    }
+    .home-left-half{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .travelText{
+        font-size: 1.8rem;
+    }
+    .bigText{
+        font-size: 5rem;
+    }
+    /* below on media screen */
+    .home-right-half{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    /* radius circle */
+    .circle-div{
+        position: static;
+        width: 250px;
+        height: 250px;
+    }
+    /* text of explore */
+    .explore{
+        font-family: 'Bellefair', serif;
+        padding:0;
+        letter-spacing: 5px;
+    }
+
+    /**********************************************************************
+    destination moon page
+    **********************************************************************/
+    #destination{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('../destination/background-destination-tablet.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+  
+    .heading{
+      font-family: 'Barlow Condensed', sans-serif;
+      color: #fff;
+    }
+
+  }
+
