@@ -11,7 +11,6 @@ HOME PAGE START OF CSS FILE
 **************************************************************************/
 html{
     width: 100%;
-    height: 100vh;
 }
 #home{
     box-sizing: border-box;
@@ -24,6 +23,7 @@ html{
     background-repeat: none;
     color: #fff;
     font-family: 'Bellefair', serif;
+    overflow: hidden;
 }
 /* font style */
 p{
@@ -87,22 +87,24 @@ padding-left: 1rem;
 
 .nav-items a{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-right: 1rem;
     text-decoration: none;
     font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
-    transform: scaleX(0);
-    transform-origin: bottom right;
 }
 
 .nav-items a:hover{
-    color:rgba(255, 255, 255, 0.699);
+    color: rgba(255, 255, 255, 0.500);
+    transition: all .250s ease-in;
+
+}
+
+.nav-items-active{
     padding-bottom: 20px;
     border-bottom: #fff solid 2px;
-
 }
 
 /* whole page in div */
@@ -150,8 +152,8 @@ padding-left: 1rem;
     background-color: #fff;
     border-radius: 50%;
     position: relative;
-    top: 300px;
-    left: 400px;
+    top: 30px;
+    left: 350px;
 }
 
 .circle-div:hover{
@@ -182,8 +184,6 @@ padding-left: 1rem;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('../destination/background-destination-desktop.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -232,7 +232,7 @@ padding-left: 1rem;
     height: 8vh;
     width: 25vw;
     align-items: center;
-    margin-top: 5rem;
+    margin: 5rem 0 1rem 0;
     
 }
 
@@ -247,7 +247,13 @@ padding-left: 1rem;
 }
 
 .dest-planet-links:hover{
+    padding-bottom: 5px;
     border-bottom: 2px solid #fff;
+}
+
+.dest-planet-links-active{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d0d6f9a1;
 }
 
 .planet-info-cc{
@@ -412,10 +418,113 @@ ul{
 li{
     list-style: none;
 }
-.active{
+.crew-active{
     background-color: #fff;;
     color: rgb(208, 214, 249);
 }
+/*******************************************************************************
+space caplse page
+********************************************************************************/
+#tech-bg{
+    background-image: url('../technology/background-technology-desktop.jpg');
+    background-image: url('../crew/background-crew-desktop.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#tech-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+.tech_title{
+    margin: 0 0 3rem 0;
+    padding-left: 3rem;
+}
+.header-title{
+    width: 100%;
+    height: 50px;
+}
+.tech-row-left{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.tech-row-mid{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70vh;
+    margin: 3rem auto;
+    justify-content: center;
+    
+}
+.tech_term{
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+.vehicle{
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+.tech-row-right{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-items: flex-end;
+    width: 30%;
+    height: 70vh;
+    margin: 3rem auto;
+}
+
+.tech_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:#fff solid 1px;
+    margin: 0.7rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+}
+.tech_link:hover{
+    color: #fff;
+    
+    border:#d0d6f9a1 solid 1px;
+}
+.tech_link_active{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.521);
+    border:#d0d6f9a1 solid 1px;
+}
+.space-img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
   /****************************************************************************
   MEDIA QUERIES FOR ALL PAGES
@@ -437,31 +546,54 @@ li{
         display: flex;
         position: fixed;
         top: 25px;
-        right:30px;
+        left: 375px;
         z-index: 200;
     }
     .nav-menu{
         display: none;
     }
+
+    #hamIcon{
+        position: fixed;
+    }
     
      .active{
         display: flex;
         flex-direction: column;
-        position: relative;
-        text-align: right;
+        position: fixed;
+        /* text-align: right; */
         top: 0;
         right: 0;
         width: 50%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.150);
+        background-color: rgba(0, 0, 0, 0.650);
         z-index: 100;
+        font-size: 1rem;
+        animation-name: slideIn;
+        animation-duration: 1s;
+        border-bottom: none;
+        border-radius: 15px;
+    }
+    .nav-items-active{
+        padding: 0;
+    }
+
+    @keyframes slideIn{
+        from{
+            width: 0;
+            height: 100vh;
+        }
+        to{
+            width: 50%;
+            height: 100vh;
+        }
     }
   
     .nav-items{
         display: flex;
         width: 50%;
         position: relative;
-        top: 450px;
+        top: 50px;
         right: -70px;
         flex-direction: column;
         align-items: flex-end;
@@ -469,8 +601,13 @@ li{
         font-family: 'Bellefair', serif;
     }
     .nav-items a{
-        font-size: 2rem;
+        font-size: 1rem;
         padding-top: 2rem;
+        border-bottom: none;
+    }
+
+    hr{
+        display: none;
     }
     /* /navbar */
 
@@ -530,11 +667,13 @@ li{
     destination moon page
     **********************************************************************/
     #destination{
-        height: 100vh;
-        width: 100vw;
         background-image: url('../destination/background-destination-tablet.jpg');
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size:cover;
+        height: 100%;
     }
   
     .heading{
@@ -542,5 +681,89 @@ li{
       color: #fff;
     }
 
+    .des-cc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        overflow:hidden;
   }
+
+  .dest-txt{
+      font-size: 1.5rem;
+      margin: 3rem 0 3rem 0;
+      text-align: center;
+  }
+  .dest-info-50 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.des-link-cc {
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-info-cc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    margin-top: 2rem;
+    align-items: center;
+}
+.avg-tr-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+
+}
+
+/* crew mobile page */
+
+.crew-con{
+  flex-direction: column;
+}
+
+.crew-info-cc{
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+}
+
+.circle-cc{
+    width: 100%;
+    justify-content: center;
+}
+
+.crew-photo-cc{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
