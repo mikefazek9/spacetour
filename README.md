@@ -39,3 +39,14 @@ link to page using Netlify
 https://tourism-space.netlify.app/
 
 
+
+
+### ScreenShots!
+---
+## Desktop Version
+---
+![Screenshot 2022-04-15 at 17-55-03 Space tourism](https://user-images.githubusercontent.com/71743477/163650871-e061bfc9-3cab-4df7-b337-6d570913f6ab.png)
+*************************************************************************************************************************************************************
+## Mobile Verison
+---
+![Screenshot 2022-04-15 at 17-59-29 Space tourism](https://user-images.githubusercontent.com/71743477/163650977-2e03e345-2575-4169-ab13-a9275e588e36.png)
